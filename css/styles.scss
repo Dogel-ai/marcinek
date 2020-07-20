@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body
+{
+    color: #fff;
+    font-family: 'Lato';
+    margin: 0;
+    background-color: #705200;
+}
+
+#content
+{
+    text-align: center;
+    background-color: #705200;
+    padding-left: 500;
+    padding-right: 500;
+}
+
+#gr
+{
+    border-radius: 25px;
+    background: #705200;
+    padding: 20px;
+    width: 500px;
+    height: 115px;
+}
+
+#header
+{
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    background-color: #705200;
+}
+
+#footer
+{
+    padding:15px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #372900;
+}
+
+.rio
+{
+    background: #705200;
+    padding: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 1080px) {
+    body {
+      padding: 15px;
+    }
+  }
+  
+  /* 
+  =====
+  EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS 
+  =====
+  */
+  
+  .menu:hover .menu__link:not(:hover){
+    color: #221900;
+  }
+  
+  /* 
+  =====
+  MENU STYLES
+  =====
+  */
+  
+  /* core styles */
+  
+  .menu__list
+  {
+    display: flex;  
+    text-align: center;
+    padding-left: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;  
+  }
+  
+  .menu__group
+  {
+    flex-grow: 1;
+  }
+  
+  .menu__link
+  {
+    display: block;
+  }
+  
+  /* skin */
+  
+  .menu
+  {
+    background-color: #372900;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  }
+  
+  .menu__link
+  {
+    padding: 20px; /* 2rem 1.5rem */
+  
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  /* states */
+  .menu__link:focus
+  {
+    outline: 2px solid #fff;
+  }
+  
+  /* hover animation */
+  
+  .menu__link
+  {
+    position: relative;
+    overflow: hidden;
+  
+    will-change: opacity;
+    transition: color .25s ease-out 
+  }
+  
+  .menu__link::before
+  {
+    left: 50%;
+    transform: translateX(-70%); 
+  }
+  
+  .menu__link::after
+  {
+    right: 50%;
+    transform: translateX(70%); 
+  }
+  
+  .menu__link:hover::before, 
+  .menu__link:hover::after
+  {
+    width: 100%;
+    transition-duration: .2s;
+  }
+  
+  .menu__group
+  {
+      font-size: 15px;
+  } 
